@@ -3,15 +3,19 @@ import {Route, Switch,BrowserRouter} from 'react-router-dom';
 import Homepage from './pages/Homepage/homepage.component';
 import './App.css';
 import ShopPage from "./pages/shop/shop.component"
-
-
+import Header from './components/header/header.component';
+import SignInPage from './pages/sign-in_and_sign-up/sign-in.component'
 function App() {
   return ( 
+    
     <BrowserRouter>
+     
     <div>
+    <Header />
     <Switch>
      <Route exact  path='/' component={Homepage}/>
      <Route  path='/shop' component={ShopPage}/>
+     <Route  path='/signin' component={SignInPage}/>
     
     </Switch></div>
     </BrowserRouter>
